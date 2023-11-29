@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".CompletedTasks">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/note"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/textDue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="57dp"
+        android:fontFamily="cursive"
+        android:text="Due Tasks"
+        android:textColor="#E91E63"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnLoadd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Load Due Tasks"
+        android:fontFamily="casual"
+        android:textColor="#E91E63"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/textDue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="btnLoaddOnClick"/>
+
+    <ListView
+        android:id="@+id/listViewDue"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="#E91E63"
+        app:layout_constraintTop_toBottomOf="@id/btnLoadd"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="NotSibling" />
+
+    <TextView
+        android:id="@+id/txtResultDue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="100dp"
+        android:background="#CDDC39"
+        android:fontFamily="casual"
+        android:gravity="center"
+        android:text=""
+        android:textColor="#E91E63"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/listViewDue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

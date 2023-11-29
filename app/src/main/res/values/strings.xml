@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Task Management</string>
+    <string-array name="optionsForTask">
+        <item>Add Task</item>
+        <item>Change Task Status</item>
+        <item>Completed tasks</item>
+        <item>Unfinished tasks</item>
+    </string-array>
+</resources>
